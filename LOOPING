@@ -1,0 +1,83 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace C03_Alegroso_Even
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("\n ");
+            Console.Write("\n ====================================================================================== ");
+            Console.Write("\n ");
+            Console.Write("\n       Name: Dancedrick Alegroso      Activity: Even       Course & Yr: BSCS-1 ");
+            Console.Write("\n ");
+            Console.Write("\n ====================================================================================== ");
+            Console.Write("\n ");
+            Console.Write("\n ");
+
+
+
+            int number, i;
+           
+
+            Console.Write("Enter a number: ");
+
+            number = int.Parse(Console.ReadLine());
+
+            if (number % 2 == 0)
+            {
+
+                Console.Write("\n ");
+                Console.Write(" You entered an Even number \n ");
+                Console.Write("\n ");
+
+                for (i = 2; i <= number; i=i+2)
+                {
+                    Console.Write(i + " ");
+                }
+
+            }
+            else 
+            {
+                Console.Write("\n ");
+                Console.Write(" You entered an Odd number \n ");
+                Console.Write("\n ");
+            }
+            Console.Write("\n ");
+
+
+            Console.Write("\n ");
+            Console.Write("\n ====================================================================================== ");
+            Console.Write("\n ");
+            Console.Write("\n       Name: Dancedrick Alegroso      Activity: NOP       Course & Yr: BSCS-1 ");
+            Console.Write("\n ");
+            Console.Write("\n ====================================================================================== ");
+            Console.Write("\n ");
+            Console.Write("\n ");
+
+
+            int noi = 1, givennoi, givennum, totalsum = 0 ;
+
+
+            Console.Write("Enter number of input: ");
+            givennoi = int.Parse(Console.ReadLine());
+
+            while (noi  <= givennoi)
+            {
+
+                Console.Write("\n Enter a number: ");
+                givennum = int.Parse(Console.ReadLine());
+                totalsum = givennum + totalsum;
+                noi++;
+
+            }
+
+            Console.WriteLine(" The sum is:" + totalsum );
+           
+        }
+    }
+}
