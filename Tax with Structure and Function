@@ -1,0 +1,103 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace c05_Alegroso_TaxFunc
+{
+    class Program
+    {
+
+        struct user
+        {
+            public double income;      
+            public string status;
+            public int dependents;
+        }
+
+
+        static double CalcuTax(double income, string status, int dependents)
+        {
+            // Check for income 
+
+            if (income >= 500000)
+            {
+                income = income * 0.20;
+            }
+            else if (income >= 250001)
+            {
+                income = income * 0.15;
+            }
+            else if (income >= 100001)
+            {
+                income = income * 0.10;
+            }
+            else if (income <= 100001)
+            {
+                income = income * 0.05;
+            }
+
+
+            // Check for income 
+
+
+            if (status == "S")
+            {
+                income = income - 10000;
+            }
+            else if (status == "M")
+            {
+                income = income - 20000;
+            }
+            else if (status == "W")
+            {
+                income = income - 10000;
+            }
+            else if (status == "D")
+            {
+                income = income - 30000;
+            }
+
+
+
+            // Check for dependents 
+
+            if (dependents < 5)
+            {
+                dependents = dependents * 10000;
+                income = income + dependents;
+            } 
+            else
+            {
+                income = income + 50000;
+            }
+
+
+            // return back the answer
+            return income;
+
+        }
+
+
+     
+
+        static void Main(string[] args)
+        {
+
+            user user1;
+
+            Console.Write("Enter income: ");
+            user1.income = double.Parse(Console.ReadLine());
+
+            Console.Write("Enter status: ");
+            user1.status = Console.ReadLine();
+
+            Console.Write("Enter dependents: ");
+            user1.dependents = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Total Tax: " + CalcuTax(user1.income, user1.status, user1.dependents));
+          
+        }
+    }
+}
