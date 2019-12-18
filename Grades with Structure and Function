@@ -1,58 +1,41 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace c05_Alegroso_Units
+namespace Grade
 {
     class Program
     {
 
-        struct Units {
-
-            public double SciGrade;
-            public double EngGrade;
+        struct units
+        {
+            public double ScienceGrade;
+            public double EnglishGrade;
             public double MathGrade;
-            public double ComGrade;
-            public double FilGrade;
+            public double ComputerGrade;
+            public double FilipinoGrade;
+        }
 
-        };
+        static double unitsAverage(double ScienceGrade, double EnglishGrade, double MathGrade, double ComputerGrade, double FilipinoGrade)
+        {
+            return (ScienceGrade + EnglishGrade + MathGrade + ComputerGrade + FilipinoGrade) / 5;
+        }
 
         static void Main(string[] args)
         {
+            units unitsAvegrage;
 
-            Units u1;
-
-            Console.Write("Enter Grades for Science: ");
-            u1.SciGrade = double.Parse(Console.ReadLine());
-
-            Console.Write("Enter Grades for English: ");
-            u1.EngGrade = double.Parse(Console.ReadLine());
-
-            Console.Write("Enter Grades for Math: ");
-            u1.MathGrade = double.Parse(Console.ReadLine());
-
-            Console.Write("Enter Grades for Computer: ");
-            u1.ComGrade = double.Parse(Console.ReadLine());
-
-            Console.Write("Enter Grades for Filipino: ");
-            u1.FilGrade = double.Parse(Console.ReadLine());
-
-            // Output Average
-            Console.WriteLine("Average " + CalcAverage(u1.SciGrade, u1.EngGrade, u1.MathGrade, u1.ComGrade, u1.FilGrade));
-
-        }
+            Console.Write("Enter grade for Science: ");
+            unitsAvegrage.ScienceGrade = int.Parse(Console.ReadLine());
+            Console.Write("Enter grade for English: ");
+            unitsAvegrage.EnglishGrade = int.Parse(Console.ReadLine());
+            Console.Write("Enter grade for Math: ");
+            unitsAvegrage.MathGrade = int.Parse(Console.ReadLine());
+            Console.Write("Enter grade for Computer: ");
+            unitsAvegrage.ComputerGrade = int.Parse(Console.ReadLine());
+            Console.Write("Enter grade for Filipino: ");
+            unitsAvegrage.FilipinoGrade = int.Parse(Console.ReadLine());
 
 
-        static double CalcAverage(double SciGrade, double EngGrade, double MathGrade, double ComGrade, double FilGrade)
-
-        {
-
-
-            return (SciGrade + EngGrade + MathGrade + ComGrade + FilGrade) / 5;
-
-
+            Console.WriteLine("Your average is " + unitsAverage(unitsAvegrage.ScienceGrade, unitsAvegrage.EnglishGrade, unitsAvegrage.MathGrade, unitsAvegrage.ComputerGrade, unitsAvegrage.FilipinoGrade));
         }
     }
 }
