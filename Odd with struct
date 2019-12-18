@@ -1,0 +1,33 @@
+using System;
+
+namespace Odd
+{
+    class Program
+    {
+       struct even
+        {
+            public int givennom;
+            public int i;
+        }
+
+
+        static void Main(string[] args)
+        {
+            even even1;
+            Console.Write("Enter a number: ");
+            even1.givennom = int.Parse(Console.ReadLine());
+
+            if (even1.givennom % 2 == 0)
+            {
+                for (even1.i = 2; even1.i <= even1.givennom; even1.i = even1.i + 2)
+                {
+                    Console.Write(even1.i + " ");
+                }
+            }           
+            else
+            {
+                Console.Write("ODD");
+            }
+        }
+    }
+}
