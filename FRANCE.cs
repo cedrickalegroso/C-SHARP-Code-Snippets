@@ -71,7 +71,7 @@ namespace France
         static double calcTotalLoan(int duration, double LA)
         {
       
-            return LA * calcRate(duration);
+              return ((LA * calcRate(duration)) + LA) / duration;
         }
 
     }
